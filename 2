@@ -1,0 +1,56 @@
+package com.company;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        // write your code here
+
+        double a, b, c;
+        double D;
+        System.out.println("   Рішення квадратного рівняння. ");
+        System.out.println(" ax+bx+c=0 ");
+        System.out.println(" Введіть a, b, c. ");
+        Scanner in = new Scanner(System.in);
+        a = in.nextDouble();
+        b = in.nextDouble();
+        c = in.nextDouble();
+        System.out.println(a + "x^2+" + "(" + b + ")x" +"+("+ c + ")=0" );
+        if (a == 0 ) {
+
+
+                if ( b == 0 && c == 0){
+                    System.out.println("Некінечна кількість коренів");
+                }
+                else if ( c!=0 && b != 0) {
+                double x;
+                x = -c / b;
+                System.out.println(" Це не квадратне рівняння. Корінь рівняння. x = " + x);
+                }
+                else  {
+                System.out.println("  Рівняння немає коренів.  ");
+                }
+            }
+        else
+            {
+                D = b * b - 4 * a * c;
+                if (D > 0) {
+                    double x1, x2;
+                    x1 = (-b - Math.sqrt(D)) / 2 * a;
+                    x2 = (-b + Math.sqrt(D)) / 2 * a;
+                    System.out.println(" Корені рівняння. x1 = " + x1 + " та x2 = " + x2);
+
+                } else if (D == 0) {
+                    double x;
+                    x = (-b) / 2 * a;
+                    System.out.println(" Корінь рівняння. x = " + x);
+                } else {
+                    System.out.println("  Рівняння немає коренів.  ");
+                }
+
+            }
+        }
+    }
+
+
